@@ -1,0 +1,57 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "mddox/0.9.1": {
+        "dependencies": {
+          "CommandLineParser": "2.8.0",
+          "LoxSmoke.DocXml": "3.5.0"
+        },
+        "runtime": {
+          "mddox.dll": {}
+        }
+      },
+      "CommandLineParser/2.8.0": {
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.0.0"
+          }
+        }
+      },
+      "LoxSmoke.DocXml/3.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/DocXml.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "mddox/0.9.1": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CommandLineParser/2.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eco2HlKQBY4Joz9odHigzGpVzv6pjsXnY5lziioMveQxr+i2Z7xYcIOMeZTgYiqnMtMAbXMXsVhrNfWO5vJS8Q==",
+      "path": "commandlineparser/2.8.0",
+      "hashPath": "commandlineparser.2.8.0.nupkg.sha512"
+    },
+    "LoxSmoke.DocXml/3.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R4JKOyf/qCusiyKkh2UmN8OU491fKxn9D3MrwLoW9NoD70xMPWTDaDDNDZFw40dRezuNf7/pxVoKRnhAL4tKIA==",
+      "path": "loxsmoke.docxml/3.5.0",
+      "hashPath": "loxsmoke.docxml.3.5.0.nupkg.sha512"
+    }
+  }
+}

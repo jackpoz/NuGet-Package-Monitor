@@ -4,7 +4,9 @@ function Get-NugetPackage {
         [Parameter(Mandatory=$true)]
         $packageName,
         [Parameter(Mandatory=$true)]
-        $outputFolder
+        $outputFolder,
+        [Parameter(Mandatory=$false)]
+        $packageVersion
     )
 
     begin {
@@ -12,7 +14,12 @@ function Get-NugetPackage {
     }
 
     process {
-        Invoke-WebRequest "https://www.nuget.org/api/v2/package/$($packageName)" -OutFile "$outputFolder\$($packageName).nupkg"
+        if (![string]::IsNullOrEmpty($packageVersion))
+        {
+            $packageVersion = "/" + $packageVersion
+        }
+
+        Invoke-WebRequest "https://www.nuget.org/api/v2/package/$($packageName)$packageVersion" -OutFile "$outputFolder\$($packageName).nupkg"
     }
 
     end {

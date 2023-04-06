@@ -9,14 +9,15 @@ function Invoke-NugetPackageDocumentationGenerator {
         [Parameter(Mandatory=$true)]
         $dotnetVersions,
         [Parameter(Mandatory=$true)]
-        $outputFolder
+        $outputFolder,
+        $packageVersion
     )
 
     begin {
     }
 
     process {
-        Get-NugetPackage $packageName "$($PWD.Path)\NuGet Packages"
+        Get-NugetPackage $packageName "$($PWD.Path)\NuGet Packages" $packageVersion
         Export-NugetPackageContent "$($PWD.Path)\NuGet Packages\$packageName.nupkg" "$($PWD.Path)\Libraries" $dotnetVersions
         Get-ChildItem "$($PWD.Path)\Libraries" | Export-LibraryDocumentation -outputFolder $outputFolder
     }

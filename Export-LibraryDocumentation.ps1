@@ -1,7 +1,7 @@
 function Export-LibraryDocumentation {
     [CmdletBinding()]
     param (
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
         $libraryPath,
         [Parameter(Mandatory=$true)]
         $outputFolder

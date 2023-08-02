@@ -14,7 +14,7 @@ function Export-NugetPackageContent {
     }
 
     process {
-        Remove-Item "$outputFolder\tmp" -ErrorAction:SilentlyContinue -Recurse
+        Remove-Item "$outputFolder\*" -ErrorAction:SilentlyContinue -Recurse
         Expand-Archive $packagePath "$outputFolder\tmp"
         foreach($version in $dotnetVersions)
         {
